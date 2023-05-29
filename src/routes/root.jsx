@@ -319,7 +319,7 @@ const Root = () => {
                   </CustomLink>
                   <a
                     key="GitHub"
-                    href="https://github.com/ivanmolto/modularalpha"
+                    href="https://github.com/ivanmolto/modular-alpha"
                     rel="noreferrer"
                     target="_blank"
                     className="group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md text-white hover:text-white hover:bg-mant"
