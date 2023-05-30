@@ -42,10 +42,9 @@ const AccountProfiler = () => {
                       Fill in the input to see the Address details
                     </h3>
                   </div>
-
                   <div className="sm:col-span-3 mt-4">
                     <label
-                      htmlFor="nftaddress"
+                      htmlFor="accountaddress"
                       className="block text-sm font-medium text-gray-900"
                     >
                       Address
