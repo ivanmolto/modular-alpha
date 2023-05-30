@@ -12,6 +12,7 @@ import Account from "./routes/account";
 import TokenProfiler from "./routes/token-profiler";
 import Token from "./routes/token";
 import TransactionTracer from "./routes/transaction-tracer";
+import Transaction from "./routes/transaction";
 import ContractInspector from "./routes/contract-inspector";
 import Contract from "./routes/contract";
 import BlockTracker from "./routes/block-tracker";
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
           { path: "tokenprofiler", element: <TokenProfiler /> },
           { path: "tokens/:tokenId", element: <Token /> },
           { path: "transactiontracer", element: <TransactionTracer /> },
+          { path: "transactions/:transactionId", element: <Transaction /> },
           { path: "contractinspector", element: <ContractInspector /> },
           { path: "contracts/:contractId", element: <Contract /> },
           { path: "blocktracker", element: <BlockTracker /> },
