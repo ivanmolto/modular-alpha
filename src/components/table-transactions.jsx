@@ -54,14 +54,14 @@ function DisplayTransactions({ addressHash }) {
                     <span className="flex flex-col truncate text-sm text-gray-500">
                       <span className="truncate">
                         From:{" "}
-                        <span className="text-blue-500">
+                        <span className="text-gray-500">
                           {tx.from.slice(0, 10)}...
                         </span>
                       </span>
                       <span>
                         <span className="truncate">
                           To:{" "}
-                          <span className="text-blue-500">
+                          <span className="text-gray-500">
                             {tx.to.slice(0, 10)}...
                           </span>
                         </span>{" "}
