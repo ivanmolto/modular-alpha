@@ -153,7 +153,7 @@ const TokenMarket = () => {
               {market.map((token) => (
                 <li
                   key={token.id}
-                  className="overflow-hidden rounded-xl border border-gray-200 shadow hover:shadow-lg"
+                  className="overflow-hidden rounded-xl border border-gray-200 shadow"
                 >
                   <div className="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-100 p-6">
                     <img
