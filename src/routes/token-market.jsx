@@ -1,111 +1,130 @@
 import { Link } from "react-router-dom";
+import mantleSymbol from "../assets/mantleSymbol.svg";
 
 const market = [
   {
     id: 1,
     name: "BIT Token",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "BIT",
     address: "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000",
   },
   {
     id: 2,
     name: "DAI Mock",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "DAI",
     address: "0xa35d7f5dd89a336a427ebb63c428c3068b6c3105",
   },
   {
     id: 3,
     name: "USDC Mock",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "USDC",
     address: "0xbaf72402f98f16e77638ce5fcc5689cd1627e8ff",
   },
   {
     id: 4,
     name: "USDT Mock",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "USDT",
     address: "0x093790d873e87b45cee9ca70b12056c705861ecd",
   },
   {
     id: 5,
     name: "Ether",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "WETH",
     address: "0xdEAddEaDdeadDEadDEADDEAddEADDEAddead1111",
   },
   {
     id: 6,
     name: "Mantle Crew",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "CREW",
     address: "0xff1718d04961Dc3211c319BE030744B167819401",
   },
   {
     id: 7,
     name: "BIT Delegate",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "🗳️",
     address: "0x1bcaFC7D7A34B678caA67F3523BbEf286A2D29a6",
   },
   {
     id: 8,
     name: "BEZ",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "BEZ",
     address: "0x0A86FD4227A5d8937D1942bdB59a74B6f3d430f7",
   },
   {
     id: 9,
     name: "Kaspian",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "KASP",
     address: "0x5e3eCE6b5Cd6305ae8f0916A050bb839A7573A88",
   },
   {
     id: 10,
     name: "SimpleToken",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "SMLT",
     address: "0x8b1902638Eb52F121E995f67Dc4A825912d8979a",
   },
   {
     id: 11,
     name: "ACUA Token",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "ACUA",
     address: "0xAAB9D5deBC2aD97552a57Bd161962780D3579508",
   },
   {
     id: 12,
     name: "ANI",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "ANI",
     address: "0xF5906F6ee7Db3faF86a41fFF2c13322EadA36b15",
   },
   {
     id: 13,
     name: "BAU",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "BAU",
     address: "0x8E44276c2Eb917e5CA60b73b03bCFBA5888114BE",
   },
   {
     id: 14,
     name: "BIT World",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "BITW",
     address: "0xE3DAD0Cd8cbEA3f2994D750E9026Fd997DeDcfA4",
   },
   {
     id: 15,
     name: "DigiPuNK",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "DPNK",
     address: "0xf0F0a5830d4f7533fC8835aFc03AB0F05Ddd6EAF",
   },
   {
     id: 16,
     name: "Funny",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "FNY",
     address: "0x16d638e9dfef934d27dabd7e96f243a89289932f",
   },
   {
     id: 17,
     name: "Mantle stablecoin",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "MAS",
     address: "0x6569ec1beea8253daa35584725d0c63e586ea8e2",
   },
   {
     id: 18,
     name: "Memloop",
+    imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
     symbol: "MLP",
     address: "0xc275ecd77584e6bdff84ae345e6de46b21e710c1",
   },
@@ -134,26 +153,36 @@ const TokenMarket = () => {
               {market.map((token) => (
                 <li
                   key={token.id}
-                  className="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow hover:shadow-lg"
+                  className="overflow-hidden rounded-xl border border-gray-200 shadow hover:shadow-lg"
                 >
-                  <Link to={`/tokens/${token.address}`}>
-                    <div className="flex w-full items-center justify-between space-x-6 p-6">
-                      <div className="flex-1 truncate">
-                        <div className="flex items-center space-x-3">
-                          <h3 className="truncate text-sm font-medium text-gray-900">
-                            {token.name}
-                          </h3>
-                          <span className="inline-block flex-shrink-0 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800">
-                            {token.symbol}
-                          </span>
-                        </div>
-
-                        <p className="mt-1 truncate text-sm text-blue-500">
-                          {token.address}
-                        </p>
-                      </div>
+                  <div className="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-100 p-6">
+                    <img
+                      src={mantleSymbol}
+                      alt={token.name}
+                      className="h-12 w-12 flex-none rounded-lg bg-white object-cover ring-1 ring-gray-900/10"
+                    />
+                    <div className="text-sm font-medium leading-6 text-gray-900">
+                      {token.symbol}
                     </div>
-                  </Link>
+                  </div>
+                  <dl className="-my-3 divide-y divide-gray-300 px-6 py-4 text-sm leading-6">
+                    <div className="flex justify-between gap-x-4 py-3">
+                      <dt className="text-gray-600">{token.name}</dt>
+                      <dd className="text-gray-700">
+                        <div></div>
+                      </dd>
+                    </div>
+                    <div className="flex justify-between gap-x-4 py-3">
+                      <dt className="text-blue-500 hover:underline truncate">
+                        <Link to={`/tokens/${token.address}`}>
+                          {token.address}
+                        </Link>
+                      </dt>
+                      <dd className="flex items-start gap-x-2">
+                        <div className="font-medium text-gray-900"></div>
+                      </dd>
+                    </div>
+                  </dl>
                 </li>
               ))}
             </ul>
