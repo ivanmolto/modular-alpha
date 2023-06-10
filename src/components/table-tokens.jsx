@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 function numberWithCommas(rawNumber) {
-  return rawNumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  var parts = rawNumber.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
 }
 
 function getTableTokens(addressHash) {
@@ -30,6 +32,7 @@ function DisplayTokens({ addressHash }) {
 
   if (tableTokensQuery.data.result.length === 0) return null;
   const tokensPagination = tableTokensQuery.data.result;
+  console.log(tokensPagination);
   return (
     <>
       <div className="mt-4 sm:flex sm:items-center">

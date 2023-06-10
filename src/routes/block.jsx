@@ -22,7 +22,9 @@ const BLOCK = gql`
 `;
 
 function numberWithCommas(rawNumber) {
-  return rawNumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  var parts = rawNumber.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
 }
 
 const Block = () => {

@@ -1,8 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "react-router-dom";
 
 function numberWithCommas(rawNumber) {
-  return rawNumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  var parts = rawNumber.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
 }
 
 function getToken(contractAddressHash) {
@@ -123,7 +126,7 @@ function TokenAddress({ contractAddressHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div className="mt-5 md:mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
                 <div className="p-5">
                   <div className="flex items-center">
@@ -133,7 +136,11 @@ function TokenAddress({ contractAddressHash }) {
                         <dt className="text-sm font-medium text-gray-500">
                           Contract
                         </dt>
-                        <dd>{token.contractAddress}</dd>
+                        <dd className="text-blue-500 hover:underline truncate">
+                          <Link to={`/contracts/${token.contractAddress}`}>
+                            {token.contractAddress}
+                          </Link>
+                        </dd>
                       </dl>
                     </div>
                   </div>
@@ -155,7 +162,7 @@ function TokenAddress({ contractAddressHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div className="mt-5 md:mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
                 <div className="p-5">
                   <div className="flex items-center">
