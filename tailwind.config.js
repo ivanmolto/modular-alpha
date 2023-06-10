@@ -10,6 +10,7 @@ export default {
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
+      blue: colors.blue,
       bit: "#008f6a",
       mant: "#65b3ae",
     },
