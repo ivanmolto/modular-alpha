@@ -65,7 +65,7 @@ const BlockTracker = () => {
                   <div className="mt-6">
                     <button
                       type="submit"
-                      className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm w-5/6 sm:w-full text-sm font-medium rounded-md text-white bg-mant hover:bg-bit hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mant"
+                      className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm w-5/6 sm:w-full text-sm font-medium rounded-md text-white bg-mant hover:bg-bit focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mant"
                     >
                       Submit
                     </button>
