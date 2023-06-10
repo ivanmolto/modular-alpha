@@ -10,8 +10,8 @@ export default {
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
-      bit: "#c1ff3c",
-      mant: "#64b3ae",
+      bit: "#008f6a",
+      mant: "#65b3ae",
     },
     extend: {
       fontFamily: {
