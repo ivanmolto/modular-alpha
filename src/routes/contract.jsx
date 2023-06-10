@@ -91,16 +91,7 @@ function Source({ addressHash }) {
           <div>
             <div className="px-4 sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
               <div className="py-3 md:flex md:items-center md:justify-between lg:border-t border-mant lg:border-mant"></div>
-              Sorry the address{" "}
-              <a
-                href={`https://explorer.testnet.mantle.xyz/address/${addressHash}`}
-                rel="noreferrer"
-                target="_blank"
-                className="truncate text-md font-medium text-blue-500"
-              >
-                {addressHash}
-              </a>{" "}
-              is not a verified contract
+              Sorry the address {addressHash} is not a verified contract
             </div>
           </div>
         </div>
@@ -160,7 +151,7 @@ function Source({ addressHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
+            <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
               <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
                 <div className="p-5">
                   <div className="flex items-center">
@@ -200,7 +191,7 @@ function Source({ addressHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
+            <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
               <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
                 <div className="p-5">
                   <div className="flex items-center">
