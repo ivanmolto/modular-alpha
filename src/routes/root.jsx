@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import { Link, Outlet, useMatch, useResolvedPath } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
+import mantleLogo from "../assets/mantleLogo.svg";
 import {
   BriefcaseIcon,
   CodeBracketIcon,
@@ -69,7 +70,7 @@ const Root = () => {
                 leaveFrom="translate-x-0"
                 leaveTo="-translate-x-full"
               >
-                <Dialog.Panel className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-mant">
+                <Dialog.Panel className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-black">
                   <Transition.Child
                     as={Fragment}
                     enter="ease-in-out duration-300"
@@ -99,7 +100,7 @@ const Root = () => {
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
-                      stroke="#c1ff3c"
+                      stroke="#008f6a"
                       className="w-8 h-8"
                     >
                       <path
@@ -236,7 +237,7 @@ const Root = () => {
                 fill=""
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
-                stroke="#c1ff3c"
+                stroke="#008f6a"
                 className="w-8 h-8"
               >
                 <path
@@ -357,8 +358,14 @@ const Root = () => {
               </div>
             </nav>
             <div className="flex-shrink-0 flex justify-around items-center px-4 mb-4"></div>
-            <div className="text-white justify-center mx-auto items-center px-4 py-3 mb-4 rounded-lg border-2 border-bit">
-              Built on Mantle
+            <div className="mb-4">
+              <a href="https://mantle.xyz" target="_blank" rel="noreferrer">
+                <img
+                  src={mantleLogo}
+                  className="mx-auto justify-center items-center h-16 w-auto"
+                  alt="Mantle logo"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -371,7 +378,10 @@ const Root = () => {
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              <Bars3Icon
+                className="h-6 w-6 text-bit focust:outline-none"
+                aria-hidden="true"
+              />
             </button>
           </div>
           <Outlet />
