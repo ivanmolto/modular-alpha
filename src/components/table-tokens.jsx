@@ -32,7 +32,6 @@ function DisplayTokens({ addressHash }) {
 
   if (tableTokensQuery.data.result.length === 0) return null;
   const tokensPagination = tableTokensQuery.data.result;
-  console.log(tokensPagination);
   return (
     <>
       <div className="mt-4 sm:flex sm:items-center">
@@ -48,7 +47,7 @@ function DisplayTokens({ addressHash }) {
           {tokensPagination.map((tok) => (
             <li key={tok.contractAddress}>
               <Link
-                to="/"
+                to={`/tokens/${tok.contractAddress}`}
                 className="block bg-white px-4 py-4 hover:bg-gray-50"
               >
                 <span className="flex items-center space-x-4">
@@ -62,6 +61,7 @@ function DisplayTokens({ addressHash }) {
                       </span>
                       <div>
                         <span className="truncate">
+                          Contract:{" "}
                           <span className="text-blue-500">
                             {tok.contractAddress.slice(0, 20)}...
                           </span>
@@ -134,7 +134,7 @@ function DisplayTokens({ addressHash }) {
                         {tok.symbol}
                       </td>
                       <td className="truncate whitespace-nowrap py-4 pl-3 pr-6 text-sm text-blue-500 font-medium">
-                        <Link to={`/accounts/${tok.contractAddress}`}>
+                        <Link to={`/tokens/${tok.contractAddress}`}>
                           {tok.contractAddress.slice(0, 20)}...
                         </Link>
                       </td>
