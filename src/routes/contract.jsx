@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "react-router-dom";
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -162,8 +163,10 @@ function Source({ addressHash }) {
                           Address
                         </dt>
                         <dd>
-                          <div className="truncate text-md font-medium text-gray-900">
-                            {addressHash}
+                          <div className="truncate text-md font-medium text-blue-500 hover:underline">
+                            <Link to={`/accounts/${addressHash}`}>
+                              {addressHash}
+                            </Link>
                           </div>
                         </dd>
                       </dl>

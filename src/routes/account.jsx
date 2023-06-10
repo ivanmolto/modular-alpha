@@ -129,7 +129,7 @@ function Balance({ addressHash }) {
               </div>
             </div>
           </div>
-          <div className="mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
+          <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
             <div className="overflow-hidden text-ellipsis rounded-lg bg-white shadow">
               <div className="p-5">
                 <div className="flex items-center">
@@ -166,7 +166,7 @@ function Balance({ addressHash }) {
               </div>
             </div>
           </div>
-          <div className="mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
+          <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
             <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
               <div className="p-5">
                 <div className="flex items-center">
@@ -202,7 +202,7 @@ function Balance({ addressHash }) {
               </div>
             </div>
           </div>
-          <div className="mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
+          <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
             <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
               <div className="p-5">
                 <div className="flex items-center">

@@ -87,7 +87,7 @@ function TokenAddress({ contractAddressHash }) {
           <div className="-mt-3 px-4 sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
             <h2 className="font-semibold leading-6 text-lg">Token Details</h2>
             <div className="py-6 md:flex md:items-center md:justify-between lg:border-t border-mant lg:border-mant"></div>
-            <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div className="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
               <div className="overflow-hidden rounded-lg bg-white shadow">
                 <div className="p-5">
                   <div className="flex items-center">
@@ -126,7 +126,7 @@ function TokenAddress({ contractAddressHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-5 md:mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
               <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
                 <div className="p-5">
                   <div className="flex items-center">
@@ -162,7 +162,7 @@ function TokenAddress({ contractAddressHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-5 md:mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
               <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
                 <div className="p-5">
                   <div className="flex items-center">
