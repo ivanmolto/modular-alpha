@@ -145,7 +145,7 @@ const TokenMarket = () => {
               <div className="py-3 md:flex md:items-center md:justify-between sm:border-t sm:border-mant"></div>
             </div>
           </div>
-          <div className="mt-4 flex-1 px-4 flex justify-between sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
+          <div className="mt-8 flex-1 px-4 flex justify-between sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
             <ul
               role="list"
               className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-6 sm:grid-cols-2 lg:grid-cols-3"
