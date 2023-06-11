@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import Nonce from "../components/nonce";
 import { CheckCircleIcon, ClockIcon } from "@heroicons/react/24/solid";
 
 function numberWithCommas(rawNumber) {
@@ -213,6 +214,7 @@ function Tx({ transactionHash }) {
                 </div>
               </div>
             </div>
+            <Nonce transaction={tx.hash} />
             <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
               <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
                 <div className="p-5">
@@ -266,9 +268,18 @@ function Tx({ transactionHash }) {
                           Value
                         </dt>
                         <dd>
-                          <div className="text-md font-medium text-grey-900">
-                            <span className="px-1.5 py-0.5 rounded-md bg-bit">
-                              {tx.value} MNT
+                          <div className="text-md font-medium text-grey-900 hidden lg:block">
+                            <span className="truncate px-1.5 py-0.5 rounded-md bg-mant">
+                              {numberWithCommas(
+                                Number(tx.value / 10 ** 18).toFixed(2)
+                              )}{" "}
+                              MNT
+                            </span>
+                          </div>
+                          <div className="block text-md font-medium text-grey-900 lg:hidden">
+                            <span className="truncate px-1.5 py-0.5 rounded-md bg-mant">
+                              {numberWithCommas(Number(tx.value / 10 ** 18))}{" "}
+                              MNT
                             </span>
                           </div>
                         </dd>
@@ -357,6 +368,97 @@ function Tx({ transactionHash }) {
                 </div>
               </div>
             </div>
+            <label
+              htmlFor="sourcedisplay"
+              className="mt-2 block text-sm font-medium text-gray-700"
+            >
+              Logs
+            </label>
+            {tx.logs.map((log) => (
+              <li className="list-none" key={log.index}>
+                <div className="mt-3 md:mt-2 overflow-hidden rounded-lg bg-white border-1 shadow">
+                  <div className="p-5">
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0"></div>
+                      <div className="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt className="text-sm font-medium text-gray-500">
+                            Address
+                          </dt>
+                          <dd>
+                            <div className="truncate text-md font-medium text-gray-900">
+                              {log.address}
+                            </div>
+                          </dd>
+                        </dl>
+
+                        {log.topics[0] != null && (
+                          <div className="text-sm font-medium text-gray-500">
+                            Topics
+                          </div>
+                        )}
+                        {log.topics[0] != null && (
+                          <dl>
+                            <dd>
+                              <div className="truncate text-md font-medium text-gray-900">
+                                [0]: {log.topics[0]}
+                              </div>
+                            </dd>
+                          </dl>
+                        )}
+                        {log.topics[1] != null && (
+                          <dl>
+                            <dd>
+                              <div className="truncate text-md font-medium text-gray-900">
+                                [1]: {log.topics[1]}
+                              </div>
+                            </dd>
+                          </dl>
+                        )}
+                        {log.topics[2] != null && (
+                          <dl>
+                            <dd>
+                              <div className="truncate text-md font-medium text-gray-900">
+                                [2]: {log.topics[2]}
+                              </div>
+                            </dd>
+                          </dl>
+                        )}
+                        {log.topics[3] != null && (
+                          <dl>
+                            <dd>
+                              <div className="truncate text-md font-medium text-gray-900">
+                                [3]: {log.topics[3]}
+                              </div>
+                            </dd>
+                          </dl>
+                        )}
+                        <dl>
+                          <dt className="text-sm font-medium text-gray-500">
+                            Data
+                          </dt>
+                          <dd>
+                            <div className="truncate text-md font-medium text-gray-900">
+                              {log.data}
+                            </div>
+                          </dd>
+                        </dl>
+                        <dl>
+                          <dt className="text-sm font-medium text-gray-500">
+                            Log Index:
+                          </dt>
+                          <dd>
+                            <div className="truncate text-md font-medium text-gray-900">
+                              {log.index}
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))}
           </div>
         </main>
       </div>
