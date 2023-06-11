@@ -165,7 +165,7 @@ const TokenMarket = () => {
                       {token.symbol}
                     </div>
                   </div>
-                  <dl className="-my-3 divide-y divide-gray-300 px-6 py-4 text-sm leading-6">
+                  <dl className="-my-3 divide-y divide-gray-300 px-6 py-4 text-sm leading-6 bg-white">
                     <div className="flex justify-between gap-x-4 py-3">
                       <dt className="text-gray-600">{token.name}</dt>
                       <dd className="text-gray-700">
