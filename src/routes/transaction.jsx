@@ -114,7 +114,7 @@ function Tx({ transactionHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
+            <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
               <div className="overflow-hidden rounded-lg bg-white shadow">
                 <div className="p-5">
                   <div className="flex items-center">
@@ -165,7 +165,7 @@ function Tx({ transactionHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
+            <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
               <div className="overflow-hidden rounded-lg bg-white shadow">
                 <div className="p-5">
                   <div className="flex items-center">
@@ -213,8 +213,8 @@ function Tx({ transactionHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
-              <div className="overflow-hidden rounded-lg bg-white border-1 shadow hover:shadow-lg">
+            <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
+              <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
                 <div className="p-5">
                   <div className="flex items-center">
                     <div className="flex-shrink-0"></div>
@@ -227,14 +227,14 @@ function Tx({ transactionHash }) {
                           <dt className="text-sm font-medium text-gray-500">
                             From
                           </dt>
-                          <dd>{tx.from}</dd>
+                          <dd className="truncate">{tx.from}</dd>
                         </Link>
                       </dl>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="overflow-hidden rounded-lg bg-white border-1 shadow hover:shadow-lg">
+              <div className="overflow-hidden rounded-lg bg-white border-1 shadow">
                 <div className="p-5">
                   <div className="flex items-center">
                     <div className="flex-shrink-0"></div>
@@ -244,10 +244,10 @@ function Tx({ transactionHash }) {
                           to={`/accounts/${tx.to}`}
                           className="truncate text-md font-medium text-blue-500"
                         >
-                          <dt className="truncate text-sm font-medium text-gray-500">
+                          <dt className="text-sm font-medium text-gray-500">
                             To
                           </dt>
-                          <dd>{tx.to}</dd>
+                          <dd className="truncate">{tx.to}</dd>
                         </Link>
                       </dl>
                     </div>
@@ -255,7 +255,7 @@ function Tx({ transactionHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-3 md:mt-2 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
               <div className="overflow-hidden rounded-lg bg-white shadow">
                 <div className="p-5">
                   <div className="flex items-center">
@@ -268,7 +268,7 @@ function Tx({ transactionHash }) {
                         <dd>
                           <div className="text-md font-medium text-grey-900">
                             <span className="px-1.5 py-0.5 rounded-md bg-bit">
-                              {tx.value} BIT
+                              {tx.value} MNT
                             </span>
                           </div>
                         </dd>
@@ -338,7 +338,7 @@ function Tx({ transactionHash }) {
                 </div>
               </div>
             </div>
-            <div className="mt-2 overflow-hidden rounded-lg bg-white border-1 shadow">
+            <div className="mt-3 md:mt-2 overflow-hidden rounded-lg bg-white border-1 shadow">
               <div className="p-5">
                 <div className="flex items-center">
                   <div className="flex-shrink-0"></div>

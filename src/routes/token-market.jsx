@@ -4,9 +4,9 @@ import mantleSymbol from "../assets/mantleSymbol.svg";
 const market = [
   {
     id: 1,
-    name: "BIT Token",
+    name: "Mantle Token",
     imageUrl: "https://tailwindui.com/img/logos/48x48/tuple.svg",
-    symbol: "BIT",
+    symbol: "MNT",
     address: "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000",
   },
   {

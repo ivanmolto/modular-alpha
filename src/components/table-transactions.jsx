@@ -65,7 +65,7 @@ function DisplayTransactions({ addressHash }) {
                             {tx.to.slice(0, 10)}...
                           </span>
                         </span>{" "}
-                        Value: {tx.value / 10 ** 18} BIT
+                        Value: {tx.value / 10 ** 18} MNT
                       </span>
                       <div>
                         <span className="truncate">
@@ -146,7 +146,7 @@ function DisplayTransactions({ addressHash }) {
                         </Link>
                       </td>
                       <td className="truncate whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {tx.value / 10 ** 18} BIT
+                        {tx.value / 10 ** 18} MNT
                       </td>
                       <td className="truncate whitespace-nowrap py-4 pl-3 pr-6 text-sm">
                         {st(tx.timeStamp).slice(0, 34)}

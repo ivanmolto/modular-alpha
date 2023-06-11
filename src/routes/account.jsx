@@ -136,11 +136,11 @@ function Balance({ addressHash }) {
                   <div className="ml-5 w-0 flex-1">
                     <dl>
                       <dt className="truncate text-sm font-medium text-gray-500">
-                        BIT Balance
+                        MNT Balance
                       </dt>
                       <dd>
                         <div className="truncate text-md font-medium text-gray-900">
-                          {balance / 10 ** 18} BIT
+                          {balance / 10 ** 18} MNT
                         </div>
                       </dd>
                     </dl>
