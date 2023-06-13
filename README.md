@@ -16,8 +16,6 @@ Made for the [Mantle hackathon at Encode Club](https://www.encode.club/mantle-ha
 
 ## Set up
 
-This application uses different endpoints from Moralis, Coingecko, Snapshot as mentioned above.
-
 This project was bootstrapped with [Vite React App](https://vitejs.dev/).
 
 Other clients and libraries used are [React Query](https://tanstack.com/query/v4), [Apollo Client](https://www.apollographql.com/docs/react), [React Router v6](https://reactrouter.com/docs/en/v6/getting-started/overview) and [TailwindCSS](https://tailwindcss.com).
